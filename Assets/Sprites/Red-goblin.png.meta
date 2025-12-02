@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0733c72d21872f843a8e57433817b7d6
+guid: 167cec24380b27e42a99763d6b27eeb3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4033355307889638888
-    second: pixil-frame-0 (6)_0
+      213: -2610930347902870728
+    second: Red-goblin_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pixil-frame-0 (6)_0
+      name: Red-goblin_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 3
         y: 0
-        width: 16
+        width: 11
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8edb2bb684b59f730800000000000000
-      internalID: 4033355307889638888
+      spriteID: 83b56ff8eac14cbd0800000000000000
+      internalID: -2610930347902870728
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pixil-frame-0 (6)_0: 4033355307889638888
+      Red-goblin_0: -2610930347902870728
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
