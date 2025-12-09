@@ -56,7 +56,7 @@ public class RulesPanel : MonoBehaviour
         swappedButtons = true;
         image.enabled = true;
         openedGate = gate;
-        for(int i = 0; i < gate.heldRules.Count; i++)
+        for(int i = 0; i < 3; i++)
         {
             if(gate.heldRules[i].Condition == null)
             {

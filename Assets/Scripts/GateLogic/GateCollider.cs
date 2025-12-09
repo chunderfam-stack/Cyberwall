@@ -16,6 +16,10 @@ public class GateCollider : MonoBehaviour
                 if(rule.Condition(checkable) == true)
                 {
                     checkable.OnCaught();
+                    if (checkable.amGood)
+                    {
+                        HeatSystem.instance.takeHeat();
+                    }
                 }
             }
         }

@@ -1,16 +1,17 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Goblin : MonoBehaviour, ICheckable
 {
     public string packageColor{ get; set; }
     public bool amGood{get;set;}
-    private Vector3 startPos;
-    private Vector3 endPos;
+    protected Vector3 startPos;
+    protected Vector3 endPos;
     public float speed = 5;
 
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
 
-    public void OnCaught()
+    public virtual void OnCaught()
     {
         Destroy(this.gameObject);
     }
@@ -37,6 +38,10 @@ public class Goblin : MonoBehaviour, ICheckable
     {
         SpriteRenderer goblinImage = GetComponent<SpriteRenderer>();
         goblinImage.sprite = DisplayColor();
+        if (!amGood)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
     private void FixedUpdate()
@@ -46,8 +51,9 @@ public class Goblin : MonoBehaviour, ICheckable
         rb.linearVelocity = direction * speed;
     }
 
-    Sprite DisplayColor()
+    protected Sprite DisplayColor()
     {
+
         switch (packageColor)
         {
             case "red":
@@ -69,4 +75,14 @@ public class Goblin : MonoBehaviour, ICheckable
     {
         Destroy(this.gameObject);
     }
+
+    public void onClick()
+    {
+        if (amGood)
+        {
+            HeatSystem.instance.takeHeat();
+        }
+        Destroy(this.gameObject);
+    }
+
 }

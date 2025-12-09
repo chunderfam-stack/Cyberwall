@@ -1,4 +1,4 @@
-using UnityEditor.Animations;
+
 using UnityEngine;
 
 public class RuleArea : MonoBehaviour
@@ -41,7 +41,7 @@ public class RuleArea : MonoBehaviour
     {
          foreach(Transform child in transform)
             {
-                if(child.GetSiblingIndex() == rule) continue;
+                if(child.GetSiblingIndex() == rule){child.gameObject.SetActive(true); continue;}
                 child.gameObject.SetActive(false);
             }
         hasDone = true;

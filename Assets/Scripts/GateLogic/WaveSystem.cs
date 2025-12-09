@@ -1,5 +1,4 @@
 using TMPro;
-using UnityEditor.ShaderGraph;
 using UnityEngine;
 public class WaveSystem : MonoBehaviour
 {
@@ -20,7 +19,7 @@ public class WaveSystem : MonoBehaviour
         {
             Destroy(this);
         }
-        tmPRO.text = (currentWave + 1).ToString() + "/10";
+        tmPRO.text = (currentWave + 1).ToString() + "/6";
     }
 
     public GameObject findType(goblinTypes type)
@@ -30,7 +29,7 @@ public class WaveSystem : MonoBehaviour
             case goblinTypes.normal:
                 return goblinPrefabs[0];
             case goblinTypes.brute:
-                return goblinPrefabs[0];
+                return goblinPrefabs[2];
             case goblinTypes.worm:
                 return goblinPrefabs[0];
             case goblinTypes.fast:
@@ -43,8 +42,8 @@ public class WaveSystem : MonoBehaviour
     public void NextWave()
     {
         currentWave++;
-        tmPRO.text = (currentWave + 1).ToString() + "/10";
-        if(currentWave > waves.Length - 1){gameOver = true; Debug.Log("BUG INCOMING");}
+        tmPRO.text = (currentWave + 1).ToString() + "/6";
+        if(currentWave > waves.Length - 1){gameOver = true;}
     }
 
     // Update is called once per frame
